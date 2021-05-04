@@ -1,7 +1,16 @@
 .episode {
-    max-width: 45rem;
     padding: 3rem 2rem;
     margin: 0 auto;
+
+    // Coloca a barra de rolagem no conteúdo do post
+    height: calc(100vh - 6.5rem);
+    overflow-y: auto;
+
+    // Centraliza o conteúdo do post
+    > * {
+        max-width: 45rem;
+        margin: 0 auto;
+    }
 
     .thumbnailContainer {
         position: relative;

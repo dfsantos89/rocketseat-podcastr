@@ -36,6 +36,10 @@
                 flex: 1;
                 margin-left: 1rem;
 
+                // Calcula o tamanho máximo do episode details
+                // para que a imagem fique com um width de 6rem
+                max-width: calc(100% - 7rem);
+
                 a {
                     display: block;
                     color: var(--gray-800);
