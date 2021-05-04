@@ -13,8 +13,13 @@
     ul {
         list-style: none;
         display: grid;
+
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+
+        @media (max-width: 1480px) {
+            grid-template-columns: 1fr;
+        }
 
         li {
             background: var(--white);
@@ -135,6 +140,10 @@
         td {
             font-size: 0.875rem;
 
+            &.publishedAt {
+                width: 100px;
+            }
+
             img {
                 width: 2.5rem;
                 height: 2.5rem;
@@ -171,6 +180,27 @@
 
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+        }
+
+        // Responsive suporte pra table
+        td, th {
+            @media (max-width: 1480px) {
+                &.publishedAt {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 1340px) {
+                &.members {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 1180px) {
+                &.duration {
+                    display: none;
                 }
             }
         }
